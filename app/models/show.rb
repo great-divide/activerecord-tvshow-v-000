@@ -20,4 +20,8 @@ class Show < ActiveRecord::Base
     Show.sum('rating')
   end
   
+  def popular_shows
+    shows = 
+  end
+  
 end
