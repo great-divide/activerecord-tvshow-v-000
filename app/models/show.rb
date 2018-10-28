@@ -12,7 +12,12 @@ class Show < ActiveRecord::Base
     show = Show.minimum('rating')
   end
   
-  def least_popular_show
+  def self.least_popular_show
     show = Show.order(season: :asc).take
   end
+  
+  def self.ratings_sum
+    
+  end
+  
 end
