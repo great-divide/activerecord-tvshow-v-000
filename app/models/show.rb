@@ -4,11 +4,11 @@ class Show < ActiveRecord::Base
     show = Show.maximum('rating')
   end
   
-  def most_popular_show
+  def self.most_popular_show
     show = Show.order(season: :desc).take
   end
 
-  def lowest_rating
+  def self.lowest_rating
     show = Show.order(rating: :asc).take
   end
 end
